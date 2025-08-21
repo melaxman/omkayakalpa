@@ -1,0 +1,3 @@
+// Placeholder for hero yoga image - In a real project, you would place the actual image file here
+// This represents: https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg
+export default '/src/assets/images/hero-yoga.jpg';

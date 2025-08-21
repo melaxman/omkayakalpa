@@ -1,0 +1,3 @@
+// Placeholder for meditation image 1
+// This represents: https://images.pexels.com/photos/3822647/pexels-photo-3822647.jpeg
+export default '/src/assets/images/meditation-1.jpg';

@@ -1,0 +1,3 @@
+// Placeholder for yoga props image
+// This represents: https://images.pexels.com/photos/3822582/pexels-photo-3822582.jpeg
+export default '/src/assets/images/yoga-props.jpg';
