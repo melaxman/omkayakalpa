@@ -10,6 +10,15 @@ import NutritionImg from '../assets/images/services/nutrition.jpg';
 import MentalImg from '../assets/images/services/mental.jpg';
 import MedicalImg from '../assets/images/services/medical.jpg';
 
+
+
+  import KansyaThaliTherapy from '../assets/images/kansya.png';
+  import Kirlianaura from '../assets/images/kirlian.jpg';
+  import HydrogrnInhale from '../assets/images/hydrogeninhale.png';
+  import Healing from '../assets/images/healing.png';
+  import Jacuzzi from '../assets/images/jacuzzi.jpg';
+
+
 const ServicesList = () => {
 
   const services = [
@@ -50,6 +59,31 @@ const ServicesList = () => {
       description: "Prevention is the best cure. Alongside holistic care, we provide physiotherapy, rehabilitation, chronic pain management, and preventive health checkups. By combining natural healing with modern medical approaches, we help you maintain long-term wellness and protect your health before issues arise."
     }
   ];
+
+  
+  const premiumTherapy = [
+    {
+      title: "Kansya Thali Therapy",
+      image: KansyaThaliTherapy
+    },
+    {
+      title: "Kirlian Aura Photography",
+      image: Kirlianaura
+    },
+    {
+      title: "Hydrogen Inhalation Therapy",
+      image: HydrogrnInhale
+    },
+    {
+      title: "Healing",
+      image: Healing
+    },
+    {
+      title: "Jacuzzi",
+      image: Jacuzzi
+    }
+  ];
+  
 
   return (
     <div className="pt-20 min-h-screen">
@@ -104,6 +138,45 @@ const ServicesList = () => {
           ))}
         </div>
       </section>
+
+      {/* Premium Therapy Section commented out */}
+
+      <section className="py-20 bg-gradient-to-br from-green-100 to-amber-100">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <AnimatedSection animation="fadeUp">
+            <h1 className="text-5xl font-bold text-gray-800 mb-6">
+              <span className="bg-gradient-to-r from-green-600 to-emerald-700 bg-clip-text text-transparent">Premium Therapy</span>
+            </h1>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {premiumTherapy.map((premium, index) => (
+              <AnimatedSection
+                key={index}
+                animation="fadeUp"
+                delay={index * 100}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={premium.image}
+                    alt={premium.title}
+                    className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                    <h3 className="text-white text-xl font-bold">{premium.title}</h3>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
     </div>
   );
